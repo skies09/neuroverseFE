@@ -34,7 +34,7 @@ const Home = () => {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center">
 						<h1 className="text-4xl md:text-6xl font-bold mb-6">
-							Welcome to MyBlog
+							Welcome to Neuroverse
 						</h1>
 						<p className="text-xl md:text-2xl mb-8 text-indigo-100">
 							Discover amazing stories, insights, and ideas
