@@ -8,7 +8,7 @@ const Footer = () => {
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 					{/* Brand */}
 					<div className="col-span-1 md:col-span-2">
-						<h3 className="text-2xl font-bold mb-4">MyBlog</h3>
+						<h3 className="text-2xl font-bold mb-4">Neuroverse</h3>
 						<p className="text-gray-300 mb-4">
 							Discover amazing stories, insights, and ideas from
 							our community of writers. Join us on this journey of
@@ -75,7 +75,7 @@ const Footer = () => {
 
 				<div className="border-t border-gray-700 mt-8 pt-8 text-center">
 					<p className="text-gray-300">
-						© {new Date().getFullYear()} MyBlog. All rights
+						© {new Date().getFullYear()} Neuroverse. All rights
 						reserved.
 					</p>
 				</div>
