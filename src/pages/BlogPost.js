@@ -14,8 +14,6 @@ const BlogPost = () => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-	console.log(post, "POST");
-
 	useEffect(() => {
 		const fetchPost = async () => {
 			try {
@@ -55,15 +53,15 @@ const BlogPost = () => {
 		return (
 			<div className="min-h-screen flex items-center justify-center">
 				<div className="text-center">
-					<h1 className="text-2xl font-bold text-gray-900 mb-4">
+					<h1 className="text-2xl font-bold text-gray-900 mb-4 font-comic">
 						Post Not Found
 					</h1>
-					<p className="text-gray-600 mb-8">
+					<p className="text-gray-600 mb-8 font-lexend">
 						The post you're looking for doesn't exist.
 					</p>
 					<Link
 						to="/blog"
-						className="inline-flex items-center text-indigo-600 hover:text-indigo-800"
+						className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-comic"
 					>
 						<ArrowLeftIcon className="h-5 w-5 mr-2" />
 						Back to Blog
@@ -79,7 +77,7 @@ const BlogPost = () => {
 			<div className="mb-8">
 				<Link
 					to="/blog"
-					className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium"
+					className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium font-comic"
 				>
 					<ArrowLeftIcon className="h-5 w-5 mr-2" />
 					Back to Blog
@@ -89,18 +87,18 @@ const BlogPost = () => {
 			{/* Post Header */}
 			<header className="mb-8">
 				{post.category && (
-					<span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full mb-4">
+					<span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full mb-4 font-comic">
 						<TagIcon className="h-4 w-4 inline mr-1" />
 						{post.category.name}
 					</span>
 				)}
 
-				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight font-quicksand">
 					{post.title}
 				</h1>
 
 				{/* Post Meta */}
-				<div className="flex flex-wrap items-center gap-4 text-gray-600 border-b border-gray-200 pb-6">
+				<div className="flex flex-wrap items-center gap-4 text-gray-600 border-b border-gray-200 pb-6 font-comic">
 					<div className="flex items-center">
 						<UserIcon className="h-5 w-5 mr-2" />
 						<span>
@@ -133,7 +131,7 @@ const BlogPost = () => {
 
 			{/* Post Content */}
 			<div className="prose prose-lg max-w-none">
-				<div className="text-gray-800 leading-relaxed whitespace-pre-line">
+				<div className="text-gray-800 leading-relaxed whitespace-pre-line font-funnel">
 					{post.content}
 				</div>
 			</div>
@@ -142,7 +140,9 @@ const BlogPost = () => {
 			<footer className="mt-12 pt-8 border-t border-gray-200">
 				<div className="flex flex-wrap items-center justify-between">
 					<div className="flex items-center space-x-4">
-						<span className="text-gray-600">Share this post:</span>
+						<span className="text-gray-600 font-comic">
+							Share this post:
+						</span>
 						<div className="flex space-x-2">
 							<button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm transition duration-200">
 								Twitter
@@ -158,19 +158,7 @@ const BlogPost = () => {
 
 					{post.author && (
 						<div className="mt-4 sm:mt-0">
-							<div className="flex items-center">
-								<div className="flex-shrink-0">
-									<div className="h-10 w-10 bg-gray-300 rounded-full flex items-center justify-center">
-										<span className="text-gray-600 font-medium">
-											{(
-												post.author.first_name ||
-												post.author.username
-											)
-												.charAt(0)
-												.toUpperCase()}
-										</span>
-									</div>
-								</div>
+							<div className="flex items-center font-comic">
 								<div className="ml-3">
 									<p className="text-sm font-medium text-gray-900">
 										{post.author.first_name &&

@@ -44,9 +44,11 @@ const BlogList = () => {
 		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 			{/* Header */}
 			<div className="text-center mb-12">
-				<h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-				<p className="text-gray-600 text-lg">
-					Explore our collection of articles and insights
+				<h1 className="text-4xl font-bold text-gray-900 mb-4 font-quicksand">
+					Neuroverse
+				</h1>
+				<p className="text-gray-600 text-lg font-lexend">
+					Discover. Understand. Empower
 				</p>
 			</div>
 
@@ -70,7 +72,7 @@ const BlogList = () => {
 								onClick={() =>
 									setSelectedCategory(category.id.toString())
 								}
-								className={`px-4 py-2 rounded-full text-sm font-medium transition duration-200 ${
+								className={`px-4 py-2 rounded-full text-sm font-medium transition duration-200 font-comic ${
 									selectedCategory === category.id.toString()
 										? "bg-indigo-600 text-white"
 										: "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -92,7 +94,7 @@ const BlogList = () => {
 					{filteredPosts.map((post) => (
 						<article
 							key={post.id}
-							className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-200"
+							className="bg-colorOne rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-200"
 						>
 							{post.featured_image && (
 								<img
@@ -103,21 +105,21 @@ const BlogList = () => {
 							)}
 							<div className="p-6">
 								{post.category && (
-									<span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full mb-3">
+									<span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full mb-3 font-comic">
 										{post.category.name}
 									</span>
 								)}
-								<h2 className="text-xl font-semibold text-gray-900 mb-3 hover:text-indigo-600">
+								<h2 className="text-xl font-semibold text-gray-900 mb-3 hover:text-indigo-600 font-quicksand">
 									<Link to={`/blog/${post.slug}`}>
 										{post.title}
 									</Link>
 								</h2>
-								<p className="text-gray-600 mb-4 line-clamp-3">
+								<p className="text-gray-600 mb-4 line-clamp-3 font-lexend">
 									{post.excerpt ||
 										post.content.substring(0, 150) + "..."}
 								</p>
 								<div className="flex items-center justify-between">
-									<div className="flex items-center text-sm text-gray-500">
+									<div className="flex items-center text-sm text-gray-500 font-comic">
 										<span>
 											By{" "}
 											{post.author.first_name ||
@@ -130,7 +132,7 @@ const BlogList = () => {
 									</div>
 									<Link
 										to={`/blog/${post.slug}`}
-										className="text-indigo-600 hover:text-indigo-800 font-medium text-sm"
+										className="text-indigo-600 hover:text-indigo-800 font-medium text-sm font-comic"
 									>
 										Read More
 									</Link>

@@ -30,18 +30,22 @@ const Home = () => {
 	return (
 		<div>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
+			<section className="bg-gradient-to-r from-colorOne to-colorFive text-black py-20">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center">
-						<h1 className="text-4xl md:text-6xl font-bold mb-6">
-							Welcome to Neuroverse
+						<h1 className="text-4xl md:text-6xl font-bold mb-6 font-quicksand">
+							Neuroverse:
+							<br className="block lg:hidden" /> Where Every Mind
+							Matters
 						</h1>
-						<p className="text-xl md:text-2xl mb-8 text-indigo-100">
-							Discover amazing stories, insights, and ideas
+						<p className="text-xl md:text-2xl mb-8 text-indigo-100 font-lexend">
+							Explore the vibrant world of autism—
+							<br className="block lg:hidden" />
+							real stories, fresh insights, and empowering ideas
 						</p>
 						<Link
 							to="/blog"
-							className="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-200"
+							className="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-200 font-comic"
 						>
 							Explore Blog
 							<ArrowRightIcon className="ml-2 h-5 w-5" />
@@ -54,10 +58,10 @@ const Home = () => {
 			<section className="py-16">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
-						<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+						<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-comic">
 							Featured Posts
 						</h2>
-						<p className="text-gray-600 text-lg">
+						<p className="text-gray-600 text-lg font-lexend">
 							Check out our latest and most popular articles
 						</p>
 					</div>
@@ -71,7 +75,7 @@ const Home = () => {
 							{featuredPosts.map((post) => (
 								<div
 									key={post.id}
-									className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-200"
+									className="bg-colorOne rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-200"
 								>
 									{post.featured_image && (
 										<img
@@ -82,21 +86,21 @@ const Home = () => {
 									)}
 									<div className="p-6">
 										{post.category && (
-											<span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full mb-3">
+											<span className="inline-block bg-indigo-100 text-indigo-800 text-sm px-3 py-1 rounded-full mb-3 font-comic">
 												{post.category.name}
 											</span>
 										)}
-										<h3 className="text-xl font-semibold text-gray-900 mb-3">
+										<h3 className="text-xl font-semibold text-gray-900 mb-3 font-quicksand">
 											{post.title}
 										</h3>
-										<p className="text-gray-600 mb-4">
+										<p className="text-gray-600 mb-4 font-lexend">
 											{post.excerpt ||
 												post.content.substring(0, 100) +
 													"..."}
 										</p>
 										<div className="flex items-center justify-between">
 											<div className="flex items-center">
-												<span className="text-sm text-gray-500">
+												<span className="text-sm text-gray-500 font-comic">
 													By{" "}
 													{post.author.first_name ||
 														post.author.username}
@@ -104,7 +108,7 @@ const Home = () => {
 												<span className="mx-2 text-gray-300">
 													•
 												</span>
-												<span className="text-sm text-gray-500">
+												<span className="text-sm text-gray-500 font-funnel">
 													{formatDate(
 														post.created_at
 													)}
@@ -112,7 +116,7 @@ const Home = () => {
 											</div>
 											<Link
 												to={`/blog/${post.slug}`}
-												className="text-indigo-600 hover:text-indigo-800 font-medium text-sm"
+												className="text-indigo-600 hover:text-indigo-800 font-medium text-sm font-comic"
 											>
 												Read More
 											</Link>
