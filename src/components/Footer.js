@@ -54,7 +54,7 @@ const Footer = () => {
 									href="#"
 									className="text-gray-300 hover:text-white transition duration-200 font-lexend"
 								>
-									Twitter
+									Instagram
 								</a>
 							</li>
 							<li>
@@ -70,7 +70,7 @@ const Footer = () => {
 									href="#"
 									className="text-gray-300 hover:text-white transition duration-200 font-lexend"
 								>
-									LinkedIn
+									Tiktok
 								</a>
 							</li>
 						</ul>

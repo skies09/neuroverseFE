@@ -62,7 +62,7 @@ const Home = () => {
 							Featured Posts
 						</h2>
 						<p className="text-gray-600 text-lg font-lexend">
-							Check out our latest and most popular articles
+							Discover. Understand. Empower
 						</p>
 					</div>
 
@@ -77,6 +77,7 @@ const Home = () => {
 									key={post.id}
 									className="bg-colorOne rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-200"
 								>
+									{post.featured_image}
 									{post.featured_image && (
 										<img
 											src={post.featured_image}

@@ -145,13 +145,13 @@ const BlogPost = () => {
 						</span>
 						<div className="flex space-x-2">
 							<button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm transition duration-200">
-								Twitter
+								Instagram
 							</button>
 							<button className="bg-blue-700 hover:bg-blue-800 text-white px-3 py-1 rounded text-sm transition duration-200">
 								Facebook
 							</button>
 							<button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition duration-200">
-								LinkedIn
+								Tiktok
 							</button>
 						</div>
 					</div>
